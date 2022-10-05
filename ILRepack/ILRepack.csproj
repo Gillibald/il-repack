@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net6.0</TargetFrameworks>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Include="$(NuGetPackageRoot)sourcelink/1.1.0/tools/pdbstr.exe"></EmbeddedResource>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="Mono.Cecil" Version="0.11.4" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\bamlparser\BamlParser.csproj" />
+	  <ProjectReference Include="..\fasterflect\Fasterflect.Netstandard.csproj" />
+	</ItemGroup>
+
+</Project>
