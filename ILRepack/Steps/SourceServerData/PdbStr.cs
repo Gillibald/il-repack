@@ -10,7 +10,7 @@ namespace ILRepacking.Steps.SourceServerData
 
         public PdbStr()
         {
-            using (var resourceStream = typeof(PdbStr).Assembly.GetManifestResourceStream("ILRepacking.pdbstr.exe"))
+            using (var resourceStream = typeof(PdbStr).Assembly.GetManifestResourceStream("pdbstr.exe"))
             using (var fileStream = File.Create(_pdbStrPath))
             {
                 resourceStream.CopyTo(fileStream);
