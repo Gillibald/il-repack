@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>Fasterflect.Netstandard</AssemblyName>
+    <PackageId>Fasterflect.Netstandard</PackageId>
+    <Description>A port of Fasterflect to Netstandard.</Description>
+    <Copyright>Buu Nguyen, Morten Mertner, Andrew Blakely</Copyright>
+    <Authors>Buu Nguyen, Morten Mertner, Andrew Blakely</Authors>
+    <PackageTags>fasterflect netstandard faster flect net standard netcore core port</PackageTags>
+    <Platforms>AnyCPU</Platforms>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>false</IsTestProject>
+    <TargetFrameworks>netstandard2.0;net6.0</TargetFrameworks>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="System.Reflection.Emit.Lightweight" Version="4.3.0" />
+  </ItemGroup>
+</Project>
