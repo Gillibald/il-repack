@@ -5,7 +5,7 @@
   </PropertyGroup>
 
 	<ItemGroup>
-		<EmbeddedResource Include="$(NuGetPackageRoot)sourcelink/1.1.0/tools/pdbstr.exe"></EmbeddedResource>
+		<EmbeddedResource Include="pdbstr.exe"/>
 	</ItemGroup>
 
 	<ItemGroup>
