@@ -834,8 +834,9 @@ namespace ILRepacking
         {
             foreach (GenericParameterConstraint gpc in input)
             {
-                gpc.ConstraintType = Import(gpc.ConstraintType, context);
-                output.Add(gpc);
+                var newGpc = new GenericParameterConstraint(Import(gpc.ConstraintType, context));
+                CopyCustomAttributes(gpc.CustomAttributes, newGpc.CustomAttributes, context);
+                output.Add(newGpc);
             }
         }
 
